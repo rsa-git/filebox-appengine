@@ -1,0 +1,7 @@
+body { font-family: 'Open Sans', sans-serif; font-size: 80% }
+img { border:none; }
+#footer { margin-top: 1em; }
+#filelist { border-spacing:0px; margin: 1em 0.5em;}
+#filelist th { background-color: #E5ECF9; }
+#filelist th { padding: 5px; }
+#filelist td { padding: 5px; }

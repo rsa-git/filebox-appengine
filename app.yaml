@@ -1,0 +1,34 @@
+application: rsa-host
+version: 26
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /favicon\.ico
+  mime_type: image/x-icon
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon\.ico
+  
+- url: /css
+  mime_type: text/css
+  static_dir: static/css
+  
+- url: /inde\.html
+  static_files: static/inde.html
+  upload: static/inde.html
+  
+- url: /delete/.*
+  script: main.app
+  login: admin
+  
+- url: /get/.*
+  script: main.app
+  
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: latest
