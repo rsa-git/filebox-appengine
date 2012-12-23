@@ -16,11 +16,11 @@ class MainHandler(webapp2.RequestHandler):
     upload_url = blobstore.create_upload_url('/upload')
     page = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">'
     page += '<html><head>'
-    page += '<title>RSa file services</title>'
+    page += '<title>RSa files security-check services</title>'
     page += '<link type="text/css" rel="stylesheet" href="/css/main.css" />'
     page += "<link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>"
     page += '</head><body>'
-    page += '<h2><a href="http://appengine.google.com/dashboard?&app_id=s~rsa-host">RSa file services</a></h2>'
+    page += '<h2><a href="http://appengine.google.com/dashboard?&app_id=s~security-check">Upload a file for security check:</a></h2>'
     if user:
       page += 'Welcome, %s! (<a href=\"%s\">sign out</a>)<p>' % (user.nickname(), users.create_logout_url("/"))
     else:
